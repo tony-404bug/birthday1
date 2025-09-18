@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bday of my life ❤️</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Zeyada&display=swap");
+
+      body {
+        height: 100vh;
+        margin: 0;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background: linear-gradient(135deg, #ffe6eb, #fff0f5, #ffe4e1);
+        font-family: "Zeyada", cursive;
+      }
+
+      /* Floating heart animation */
+      .heart-anim {
+        position: fixed;
+        bottom: -50px;
+        font-size: 24px;
+        color: rgba(255, 0, 80, 0.7);
+        animation: floatUp 6s linear infinite;
+      }
+      @keyframes floatUp {
+        0% {
+          transform: translateY(0) scale(1);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(-110vh) scale(1.5);
+          opacity: 0;
+        }
+      }
+
+      .paper {
+        background: #fffafc;
+        border: 2px solid #f4c2d7;
+        background-image: repeating-linear-gradient(
+          0deg,
+          #fffafc,
+          #fffafc 28px,
+          #ffe6f0 29px
+        );
+        padding: 20px 100px;
+        box-shadow: 2px 12px 20px rgba(0, 0, 0, 0.2);
+        transform: rotateZ(-5deg);
+        position: absolute;
+        border-radius: 12px;
+        transition: transform 0.5s ease, box-shadow 0.5s ease;
+        cursor: grab;
+        text-align: center;
+      }
+
+      /* Flip animation on hover */
+      /* Optional hover effect: just slightly scale for feedback */
+      .paper:hover {
+        transform: scale(1.05);
+        box-shadow: 2px 15px 25px rgba(0, 0, 0, 0.35);
+      }
+
+      .paper.heart {
+        position: relative;
+        width: 450px;
+        height: 450px;
+        padding: 20px;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .paper.heart p {
+        font-size: 28px;
+        color: rgb(200, 0, 80);
+        opacity: 0.9;
+        margin: 5px 0;
+      }
+
+      .love-text {
+        font-size: 28px;
+        color: rgb(180, 0, 90);
+        margin: 0;
+        text-align: center;
+      }
+
+      .glow-heart {
+        font-size: 42px;
+        color: red;
+        animation: pulse 1.2s infinite;
+        text-shadow: 0 0 10px rgba(255, 0, 100, 0.8),
+          0 0 20px rgba(255, 0, 120, 0.6), 0 0 30px rgba(255, 0, 140, 0.4);
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        50% {
+          transform: scale(1.3);
+          opacity: 0.8;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+      .paper.image {
+        padding: 15px;
+      }
+      img {
+        max-width: 100%;
+        max-height: 250px;
+        width: auto;
+        height: auto;
+        border-radius: 8px;
+        display: block;
+        margin: 0 auto;
+        user-select: none;
+      }
+
+      p {
+        font-size: 42px;
+        color: rgb(120, 0, 80);
+        opacity: 0.85;
+        margin: 10px 0;
+        filter: drop-shadow(1.5px 1.5px 1px rgba(120, 0, 80, 0.6));
+        user-select: none;
+      }
+
+      /* Glowing banner */
+      .banner {
+        position: fixed;
+        bottom: 20px;
+        font-size: 36px;
+        color: #ff0066;
+        text-shadow: 0 0 10px #ff3399, 0 0 20px #ff66cc, 0 0 30px #ff99cc;
+        animation: glow 1.5s infinite alternate;
+      }
+      @keyframes glow {
+        0% {
+          text-shadow: 0 0 10px #ff3399, 0 0 20px #ff66cc, 0 0 30px #ff99cc;
+        }
+        100% {
+          text-shadow: 0 0 20px #ff3399, 0 0 40px #ff66cc, 0 0 60px #ff99cc;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Background music -->
+    <audio autoplay loop muted>
+      <source src="song.mp3" type="audio/mpeg" />
+    </audio>
+
+    <!-- Floating hearts container -->
+    <div id="hearts-container"></div>
+
+    <!-- Heart-shaped paper with love message -->
+    <div class="paper heart">
+      <p class="love-text">
+        "Teri muskaan meri pehchaan ban jaaye,<br />
+        Tera har din meri jaan ban jaaye,<br />
+        Janamdin par bas itni dua hai meri,<br />
+        Tere saath mera har armaan poora ho jaaye." 🎂
+      </p>
+      <div class="glow-heart">❤️</div>
+    </div>
+
+    <!-- Other papers -->
+    <div class="paper image">
+      <p>and I fallen in</p>
+      <p>Love with You 😍</p>
+      <img src="image1.jpg" alt="love pic 1" />
+    </div>
+
+    <div class="paper image">
+      <p>Tum meri jaan hai</p>
+      <p>Tumhare bina meri duniya adhuri hai 🥰</p>
+      <img src="image3.webp" alt="love pic 2" />
+    </div>
+
+    <div class="paper image">
+      <p>Aage jitne bhi birthdays aayenge na,</p>
+      <p>main chahta hu sab tumhare saath celebrate karu❤️</p>
+      <img src="image2.webp" alt="love pic 3" />
+    </div>
+
+    <div class="paper">
+      <p>Tumhare bina meri duniya adhuri hai,</p>
+      <p>tum mere din ki smile aur raat ki dua hai😍</p>
+    </div>
+
+    <div class="paper">
+      <p>Happy Birthday Divya,</p>
+      <p>tum meri life ki sabse badi blessing hai❤️</p>
+    </div>
+
+    <div class="paper">
+      <p>Drag the papers to move!</p>
+    </div>
+
+    <!-- Glowing banner -->
+    <div class="banner">Happy Birthday My Love ❤️</div>
+
+    <script>
+      let highestZ = 1;
+
+      class Paper {
+        holdingPaper = false;
+        mouseTouchX = 0;
+        mouseTouchY = 0;
+        mouseX = 0;
+        mouseY = 0;
+        prevMouseX = 0;
+        prevMouseY = 0;
+        velX = 0;
+        velY = 0;
+        rotation = Math.random() * 30 - 15;
+        currentPaperX = 0;
+        currentPaperY = 0;
+        rotating = false;
+
+        init(paper) {
+          const moveHandler = (x, y) => {
+            if (!this.rotating) {
+              this.mouseX = x;
+              this.mouseY = y;
+              this.velX = this.mouseX - this.prevMouseX;
+              this.velY = this.mouseY - this.prevMouseY;
+            }
+            if (this.holdingPaper) {
+              if (!this.rotating) {
+                this.currentPaperX += this.velX;
+                this.currentPaperY += this.velY;
+              }
+              this.prevMouseX = this.mouseX;
+              this.prevMouseY = this.mouseY;
+              paper.style.transform = `translateX(${this.currentPaperX}px) translateY(${this.currentPaperY}px) rotateZ(${this.rotation}deg)`;
+            }
+          };
+
+          document.addEventListener("mousemove", (e) =>
+            moveHandler(e.clientX, e.clientY)
+          );
+          document.addEventListener("touchmove", (e) => {
+            if (e.touches[0])
+              moveHandler(e.touches[0].clientX, e.touches[0].clientY);
+          });
+
+          paper.addEventListener("mousedown", (e) => {
+            if (this.holdingPaper) return;
+            this.holdingPaper = true;
+            paper.style.zIndex = highestZ++;
+            this.mouseTouchX = e.clientX;
+            this.mouseTouchY = e.clientY;
+            this.prevMouseX = e.clientX;
+            this.prevMouseY = e.clientY;
+          });
+
+          paper.addEventListener("touchstart", (e) => {
+            if (this.holdingPaper) return;
+            this.holdingPaper = true;
+            paper.style.zIndex = highestZ++;
+            if (e.touches[0]) {
+              this.mouseTouchX = e.touches[0].clientX;
+              this.mouseTouchY = e.touches[0].clientY;
+              this.prevMouseX = e.touches[0].clientX;
+              this.prevMouseY = e.touches[0].clientY;
+            }
+          });
+
+          window.addEventListener("mouseup", () => {
+            this.holdingPaper = false;
+            this.rotating = false;
+          });
+          window.addEventListener("touchend", () => {
+            this.holdingPaper = false;
+            this.rotating = false;
+          });
+        }
+      }
+
+      const papers = Array.from(document.querySelectorAll(".paper"));
+      papers.forEach((paper) => {
+        const p = new Paper();
+        p.init(paper);
+      });
+
+      // Floating hearts generator
+      const heartsContainer = document.getElementById("hearts-container");
+      function createHeart() {
+        const heart = document.createElement("div");
+        heart.classList.add("heart-anim");
+        heart.innerHTML = "❤️";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize = 15 + Math.random() * 20 + "px";
+        heart.style.animationDuration = 3 + Math.random() * 2 + "s";
+        heartsContainer.appendChild(heart);
+        setTimeout(() => heart.remove(), 7000);
+      }
+      setInterval(createHeart, 1500);
+    </script>
+  </body>
+</html>
